@@ -46,14 +46,6 @@ function isValidUrl(url) {
   return validator.test(url)
 }
 
-// could also use the POST body instead of query string: http://expressjs.com/en/api.html#req.body
-app.post("/dreams", function (request, response) {
-  response.sendStatus(200);
-});
-
-// Simple in-memory store for now
-
-
 // listen for requests :)
 var listener = app.listen(process.env.PORT, function () {
   console.log('Your app is listening on port ' + listener.address().port);
